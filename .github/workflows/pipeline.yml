@@ -22,7 +22,7 @@ jobs:
             with:
                 python-version: '3.13'
           - name: "Pre-process snapshots"
-            run: python ./scripts/main.py "snapshots"
+            run: python main.py "snapshots"
             # run: |
             #   pwd
             #   ls -rtal
