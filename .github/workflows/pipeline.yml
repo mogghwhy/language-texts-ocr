@@ -11,3 +11,9 @@ on:
 permissions:
   contents: write  # For git commit/push
 
+jobs:
+    snapshot-ocr:
+        runs-on: ubuntu-latest
+        steps:
+          - name: "Checkout Repo"
+            uses: actions/checkout@v5
