@@ -1,5 +1,5 @@
 import sys
-from lib.config_utils import find_region_cfg
+from module.config_utils import find_region_cfg
 
 def main():
 
