@@ -3,6 +3,9 @@ from pathlib import Path
 def find_region_cfg(root_dir, region_config_name):
     return find_files(root_dir, region_config_name)
 
+def find_snapshot_files(root_dir, snapshot_file_extension=".jpg"):
+    return find_files(root_dir, f"*{snapshot_file_extension}", search_recursive=False)
+
 def find_files(root_dir, file_name, search_recursive=True):
     root = Path(root_dir).resolve()
     if search_recursive:
