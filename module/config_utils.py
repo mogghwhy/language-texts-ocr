@@ -9,3 +9,7 @@ def find_files(root_dir, file_name, search_recursive=True):
         return [p.resolve() for p in root.rglob(file_name)]
     else:
         return [p.resolve() for p in root.glob(file_name)]
+    
+def get_abs_parent_folder(abs_path):
+    root = Path(abs_path)
+    return root.parent.absolute()
