@@ -1,4 +1,12 @@
 from pathlib import Path
+import logging
+
+# Configure logger
+logging.basicConfig(
+    level=logging.INFO,
+    format="[%(asctime)s] %(levelname)s: %(message)s",
+)
+logger = logging.getLogger(__name__)
 
 def find_region_cfg(root_dir, region_config_name):
     return find_files(root_dir, region_config_name)
