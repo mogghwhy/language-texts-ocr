@@ -1,5 +1,6 @@
 import sys
 from module.config_utils import get_configs_and_snapshots
+from module.image_utils import process_images
 
 def main():
 
@@ -14,8 +15,10 @@ def main():
         print(f"Config: {item['config']}")
         print(f"Snapshot base dir: {item['snapshot_base_dir']}")
         print("Snapshots:")
-        for snapshot in item['snapshots']:
-            print(f"  - {snapshot}")
+        process_images(item)
+        # for snapshot in item['snapshots']:
+        #     #print(f"  - {snapshot}")
+            
     # all_cfgs = find_region_cfg(snapshots_root, config_file_name)
     # for path in all_cfgs:
     #     print(path)
